@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minima Expert chat shell. Header + status fill the top, the thread scrolls in the
+     middle, the composer sits at the bottom. Insets are applied in MainActivity so the
+     header clears the status bar and the composer clears the nav bar. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A0A0F">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#15151F"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Minima Expert"
+            android:textColor="#F7931A"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:letterSpacing="0.02" />
+
+        <TextView
+            android:id="@+id/badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="offline"
+            android:textColor="#9A9AA8"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#15151F"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="10dp"
+        android:text="Loading…"
+        android:textColor="#9A9AA8"
+        android:textSize="12sp" />
+
+    <ScrollView
+        android:id="@+id/threadScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/thread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/composer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#15151F"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/q"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ask about Minima…"
+            android:textColorHint="#6A6A78"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:maxLines="4"
+            android:inputType="textCapSentences|textMultiLine"
+            android:background="@android:color/transparent"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+        <Button
+            android:id="@+id/ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ask"
+            android:textColor="#0A0A0F"
+            android:backgroundTint="#F7931A" />
+    </LinearLayout>
+
+</LinearLayout>

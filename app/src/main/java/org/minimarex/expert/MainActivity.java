@@ -6,15 +6,18 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Corpus corpus;
     private Embedder embedder;
+    private AiConfig aiConfig;
     private volatile boolean ready = false, busy = false;
 
     private static final String[] SUGGESTIONS = {
@@ -65,9 +69,11 @@ public class MainActivity extends AppCompatActivity {
         q = findViewById(R.id.q);
         ask = findViewById(R.id.ask);
 
+        aiConfig = new AiConfig(this);
         applyInsets();
         ask.setEnabled(false);
         ask.setOnClickListener(v -> submit());
+        badge.setOnClickListener(v -> openAiSettings());   // tap the badge to configure online AI
         boot();
     }
 
@@ -107,9 +113,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void onReady() {
         status.setText("Ready · " + corpus.count + " passages · offline");
-        badge.setText("📚 offline");
         ask.setEnabled(true);
+        updateBadge();
         renderWelcome();
+    }
+
+    /** Badge reflects the answer tier and is tappable to open AI settings. */
+    private void updateBadge() {
+        if (aiConfig.active()) { badge.setText("⚡ AI ⚙"); badge.setTextColor(ExpertDesign.ACCENT); }
+        else { badge.setText("📚 offline ⚙"); badge.setTextColor(ExpertDesign.DIM); }
     }
 
     private void renderWelcome() {
@@ -117,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         line(card, "Ask me anything about Minima", ExpertDesign.TEXT, 16f, true);
         line(card, "Answers are grounded in " + corpus.count + " passages from the protocol docs, "
                 + "interviews and command reference — fully offline, with citations.", ExpertDesign.DIM, 13f, false);
+        line(card, "Tap the badge (top-right) to turn on AI-written answers (online).", ExpertDesign.DIM_2, 12f, false);
         TextView tryT = line(card, "Try:", ExpertDesign.DIM, 12f, false);
         tryT.setPadding(0, dp(10), 0, dp(2));
         for (String s : SUGGESTIONS) card.addView(chip(s));
@@ -140,7 +153,15 @@ public class MainActivity extends AppCompatActivity {
             try {
                 final float[] qv = embedder.embed(text);
                 final List<Retriever.Hit> hits = Retriever.retrieve(corpus, qv, text);
-                ui.post(() -> { card.removeAllViews(); renderAnswer(card, hits); done(); });
+                ui.post(() -> {
+                    card.removeAllViews();
+                    if (aiConfig.active() && !hits.isEmpty()) {
+                        renderWithAi(card, text, hits);   // streams the answer, then calls done()
+                    } else {
+                        renderAnswer(card, hits);
+                        done();
+                    }
+                });
             } catch (Exception ex) {
                 ui.post(() -> { searching.setText("Error: " + ex.getMessage()); done(); });
             }
@@ -148,6 +169,98 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void done() { busy = false; ask.setEnabled(true); scrollDown(); }
+
+    /** AI tier: a streaming Answer panel on top, the cited Sources below it. The online model answers
+     *  strictly from the retrieved passages; retrieval itself stayed fully offline. */
+    private void renderWithAi(LinearLayout card, String query, List<Retriever.Hit> hits) {
+        TextView ansHead = line(card, "Answer", ExpertDesign.ACCENT, 13f, true);
+        ansHead.setPadding(0, 0, 0, dp(4));
+        final TextView ans = line(card, "…", ExpertDesign.TEXT, 15f, false);
+
+        TextView srcHead = line(card, "Sources", ExpertDesign.DIM, 12f, true);
+        srcHead.setPadding(0, dp(14), 0, dp(4));
+        int n = 1;
+        for (Retriever.Hit h : hits) card.addView(sourceCard(h, n++));
+
+        final StringBuilder acc = new StringBuilder();
+        final String userPrompt = Prompt.build(query, hits);
+        io.execute(() -> OnlineLlm.stream(aiConfig, Prompt.SYSTEM, userPrompt, new OnlineLlm.Cb() {
+            @Override public void onToken(String delta) {
+                acc.append(delta);
+                ui.post(() -> { ans.setText(acc.toString()); scrollDown(); });
+            }
+            @Override public void onDone() {
+                ui.post(() -> { if (acc.length() == 0) ans.setText("(the model returned no answer)"); done(); });
+            }
+            @Override public void onError(String message) {
+                ui.post(() -> {
+                    ans.setTextColor(ExpertDesign.RED);
+                    ans.setText("AI error: " + message + "\n\nSee the cited passages below.");
+                    done();
+                });
+            }
+        }));
+    }
+
+    /** Online-AI settings: any OpenAI-compatible endpoint + key + model, entered in-app (never bundled). */
+    private void openAiSettings() {
+        LinearLayout box = new LinearLayout(this);
+        box.setOrientation(LinearLayout.VERTICAL);
+        box.setPadding(dp(20), dp(8), dp(20), dp(8));
+
+        TextView info = new TextView(this);
+        info.setText("Generate written answers from the retrieved passages using an online model. "
+                + "Works with any OpenAI-compatible API. Groq is free — get a key at console.groq.com. "
+                + "Retrieval stays fully offline; only AI answers use the network.");
+        info.setTextColor(ExpertDesign.DIM);
+        info.setTextSize(12f);
+        info.setPadding(0, 0, 0, dp(8));
+        box.addView(info);
+
+        final EditText url = settingsField(box, "Base URL", aiConfig.baseUrl, InputType.TYPE_TEXT_VARIATION_URI);
+        final EditText model = settingsField(box, "Model", aiConfig.model, InputType.TYPE_CLASS_TEXT);
+        final EditText key = settingsField(box, "API key", aiConfig.key,
+                InputType.TYPE_TEXT_VARIATION_PASSWORD | InputType.TYPE_CLASS_TEXT);
+
+        final CheckBox enable = new CheckBox(this);
+        enable.setText("Use AI answers (online)");
+        enable.setTextColor(ExpertDesign.TEXT);
+        enable.setChecked(aiConfig.enabled);
+        box.addView(enable);
+
+        ScrollView sv = new ScrollView(this);
+        sv.addView(box);
+
+        new AlertDialog.Builder(this)
+                .setTitle("AI answers")
+                .setView(sv)
+                .setPositiveButton("Save", (d, w) -> {
+                    aiConfig.baseUrl = url.getText().toString();
+                    aiConfig.model = model.getText().toString();
+                    aiConfig.key = key.getText().toString();
+                    aiConfig.enabled = enable.isChecked();
+                    aiConfig.save();
+                    updateBadge();
+                })
+                .setNegativeButton("Cancel", null)
+                .show();
+    }
+
+    private EditText settingsField(LinearLayout parent, String label, String value, int inputType) {
+        TextView l = new TextView(this);
+        l.setText(label);
+        l.setTextColor(ExpertDesign.DIM);
+        l.setTextSize(12f);
+        l.setPadding(0, dp(8), 0, dp(2));
+        parent.addView(l);
+        EditText e = new EditText(this);
+        e.setText(value);
+        e.setTextColor(ExpertDesign.TEXT);
+        e.setTextSize(14f);
+        e.setInputType(inputType);
+        parent.addView(e);
+        return e;
+    }
 
     private void renderAnswer(LinearLayout card, List<Retriever.Hit> hits) {
         if (hits.isEmpty()) {

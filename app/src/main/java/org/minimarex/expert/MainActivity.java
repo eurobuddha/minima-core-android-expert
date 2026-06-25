@@ -1,23 +1,21 @@
 package org.minimarex.expert;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -73,8 +71,16 @@ public class MainActivity extends AppCompatActivity {
         applyInsets();
         ask.setEnabled(false);
         ask.setOnClickListener(v -> submit());
-        badge.setOnClickListener(v -> openAiSettings());   // tap the badge to configure online AI
+        badge.setOnClickListener(v -> startActivity(new Intent(this, SetupActivity.class)));
         boot();
+        if (!aiConfig.setupSeen) startActivity(new Intent(this, SetupActivity.class));   // first-run wizard
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        aiConfig = new AiConfig(this);   // pick up changes the setup wizard saved
+        updateBadge();
     }
 
     /** Header clears the status bar; composer clears the nav bar; dark status-bar icons off. */
@@ -84,9 +90,12 @@ public class MainActivity extends AppCompatActivity {
         final int compBottom = composer.getPaddingBottom();
         ViewCompat.setOnApplyWindowInsetsListener(root, (v, insets) -> {
             Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            Insets ime = insets.getInsets(WindowInsetsCompat.Type.ime());
+            // Composer clears the nav bar normally, and rides up above the soft keyboard when it opens.
+            int bottom = Math.max(bars.bottom, ime.bottom);
             header.setPadding(header.getPaddingLeft(), headerTop + bars.top, header.getPaddingRight(), header.getPaddingBottom());
             composer.setPadding(composer.getPaddingLeft() + bars.left, composer.getPaddingTop(),
-                    composer.getPaddingRight() + bars.right, compBottom + bars.bottom);
+                    composer.getPaddingRight() + bars.right, compBottom + bottom);
             return insets;
         });
         ViewCompat.requestApplyInsets(root);
@@ -173,14 +182,16 @@ public class MainActivity extends AppCompatActivity {
     /** AI tier: a streaming Answer panel on top, the cited Sources below it. The online model answers
      *  strictly from the retrieved passages; retrieval itself stayed fully offline. */
     private void renderWithAi(LinearLayout card, String query, List<Retriever.Hit> hits) {
-        TextView ansHead = line(card, "Answer", ExpertDesign.ACCENT, 13f, true);
-        ansHead.setPadding(0, 0, 0, dp(4));
-        final TextView ans = line(card, "…", ExpertDesign.TEXT, 15f, false);
-
+        // Sources render first (instant), then the AI answer streams into a panel BELOW them — so the
+        // reference docs stay on top and the screen is never blank while the answer generates.
         TextView srcHead = line(card, "Sources", ExpertDesign.DIM, 12f, true);
-        srcHead.setPadding(0, dp(14), 0, dp(4));
+        srcHead.setPadding(0, 0, 0, dp(4));
         int n = 1;
         for (Retriever.Hit h : hits) card.addView(sourceCard(h, n++));
+
+        TextView ansHead = line(card, "Answer", ExpertDesign.ACCENT, 13f, true);
+        ansHead.setPadding(0, dp(14), 0, dp(4));
+        final TextView ans = line(card, "…", ExpertDesign.TEXT, 15f, false);
 
         final StringBuilder acc = new StringBuilder();
         final String userPrompt = Prompt.build(query, hits);
@@ -200,66 +211,6 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         }));
-    }
-
-    /** Online-AI settings: any OpenAI-compatible endpoint + key + model, entered in-app (never bundled). */
-    private void openAiSettings() {
-        LinearLayout box = new LinearLayout(this);
-        box.setOrientation(LinearLayout.VERTICAL);
-        box.setPadding(dp(20), dp(8), dp(20), dp(8));
-
-        TextView info = new TextView(this);
-        info.setText("Generate written answers from the retrieved passages using an online model. "
-                + "Works with any OpenAI-compatible API. Groq is free — get a key at console.groq.com. "
-                + "Retrieval stays fully offline; only AI answers use the network.");
-        info.setTextColor(ExpertDesign.DIM);
-        info.setTextSize(12f);
-        info.setPadding(0, 0, 0, dp(8));
-        box.addView(info);
-
-        final EditText url = settingsField(box, "Base URL", aiConfig.baseUrl, InputType.TYPE_TEXT_VARIATION_URI);
-        final EditText model = settingsField(box, "Model", aiConfig.model, InputType.TYPE_CLASS_TEXT);
-        final EditText key = settingsField(box, "API key", aiConfig.key,
-                InputType.TYPE_TEXT_VARIATION_PASSWORD | InputType.TYPE_CLASS_TEXT);
-
-        final CheckBox enable = new CheckBox(this);
-        enable.setText("Use AI answers (online)");
-        enable.setTextColor(ExpertDesign.TEXT);
-        enable.setChecked(aiConfig.enabled);
-        box.addView(enable);
-
-        ScrollView sv = new ScrollView(this);
-        sv.addView(box);
-
-        new AlertDialog.Builder(this)
-                .setTitle("AI answers")
-                .setView(sv)
-                .setPositiveButton("Save", (d, w) -> {
-                    aiConfig.baseUrl = url.getText().toString();
-                    aiConfig.model = model.getText().toString();
-                    aiConfig.key = key.getText().toString();
-                    aiConfig.enabled = enable.isChecked();
-                    aiConfig.save();
-                    updateBadge();
-                })
-                .setNegativeButton("Cancel", null)
-                .show();
-    }
-
-    private EditText settingsField(LinearLayout parent, String label, String value, int inputType) {
-        TextView l = new TextView(this);
-        l.setText(label);
-        l.setTextColor(ExpertDesign.DIM);
-        l.setTextSize(12f);
-        l.setPadding(0, dp(8), 0, dp(2));
-        parent.addView(l);
-        EditText e = new EditText(this);
-        e.setText(value);
-        e.setTextColor(ExpertDesign.TEXT);
-        e.setTextSize(14f);
-        e.setInputType(inputType);
-        parent.addView(e);
-        return e;
     }
 
     private void renderAnswer(LinearLayout card, List<Retriever.Hit> hits) {

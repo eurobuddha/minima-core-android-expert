@@ -14,6 +14,7 @@ public final class AiConfig {
     private final SharedPreferences sp;
 
     public boolean enabled;
+    public boolean setupSeen;     // true once the first-run wizard has been shown (enabled or skipped)
     public String baseUrl;
     public String model;
     public String key;
@@ -25,6 +26,7 @@ public final class AiConfig {
     public AiConfig(Context ctx) {
         sp = ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         enabled = sp.getBoolean("enabled", false);
+        setupSeen = sp.getBoolean("setupSeen", false);
         baseUrl = sp.getString("baseUrl", DEF_URL);
         model = sp.getString("model", DEF_MODEL);
         key = sp.getString("key", "");
@@ -33,6 +35,7 @@ public final class AiConfig {
     public void save() {
         sp.edit()
             .putBoolean("enabled", enabled)
+            .putBoolean("setupSeen", setupSeen)
             .putString("baseUrl", baseUrl.trim())
             .putString("model", model.trim())
             .putString("key", key.trim())

@@ -1,4 +1,4 @@
-package org.minimarex.expert;
+package com.eurobuddha.expert;
 
 /** Shared dark + orange palette (matches the native Minima wallet/vestr apps). */
 public final class ExpertDesign {

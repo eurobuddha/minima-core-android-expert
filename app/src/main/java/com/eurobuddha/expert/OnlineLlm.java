@@ -1,4 +1,4 @@
-package org.minimarex.expert;
+package com.eurobuddha.expert;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

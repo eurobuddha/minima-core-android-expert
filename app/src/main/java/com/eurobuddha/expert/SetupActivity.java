@@ -1,4 +1,4 @@
-package org.minimarex.expert;
+package com.eurobuddha.expert;
 
 import android.content.ClipboardManager;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package org.minimarex.expert;
+package com.eurobuddha.expert;
 
 import java.util.ArrayList;
 import java.util.Arrays;

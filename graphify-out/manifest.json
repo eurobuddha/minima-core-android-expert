@@ -1,0 +1,77 @@
+{
+  "app/build.gradle": {
+    "mtime": 1783342012.4101903,
+    "ast_hash": "e119d0b0d0008e37daa37a906e21aad1",
+    "semantic_hash": "e119d0b0d0008e37daa37a906e21aad1"
+  },
+  "app/src/main/assets/corpus.json": {
+    "mtime": 1782431109.7522757,
+    "ast_hash": "ce5bcf73d68cabff483c347969f8dc05",
+    "semantic_hash": "ce5bcf73d68cabff483c347969f8dc05"
+  },
+  "app/src/main/java/com/eurobuddha/expert/AiConfig.java": {
+    "mtime": 1783342011.0201254,
+    "ast_hash": "eeae8f1046a33837c19a1f15e452d6a1",
+    "semantic_hash": "eeae8f1046a33837c19a1f15e452d6a1"
+  },
+  "app/src/main/java/com/eurobuddha/expert/Corpus.java": {
+    "mtime": 1783342011.0210707,
+    "ast_hash": "ad6d3610723c0a194e98c348679489d7",
+    "semantic_hash": "ad6d3610723c0a194e98c348679489d7"
+  },
+  "app/src/main/java/com/eurobuddha/expert/Embedder.java": {
+    "mtime": 1783342011.0190074,
+    "ast_hash": "82a9e4313d0ea4eef51d4218042fe26e",
+    "semantic_hash": "82a9e4313d0ea4eef51d4218042fe26e"
+  },
+  "app/src/main/java/com/eurobuddha/expert/ExpertDesign.java": {
+    "mtime": 1783342011.0225425,
+    "ast_hash": "f2222558b38d4fea3a7c4fac0b4b49f4",
+    "semantic_hash": "f2222558b38d4fea3a7c4fac0b4b49f4"
+  },
+  "app/src/main/java/com/eurobuddha/expert/MainActivity.java": {
+    "mtime": 1783342011.0184488,
+    "ast_hash": "1ffbd9d79bf953b311e69a4360a4ae90",
+    "semantic_hash": "1ffbd9d79bf953b311e69a4360a4ae90"
+  },
+  "app/src/main/java/com/eurobuddha/expert/OnlineLlm.java": {
+    "mtime": 1783342011.0216625,
+    "ast_hash": "f0270621d60fbbe7684cab52e23388d4",
+    "semantic_hash": "f0270621d60fbbe7684cab52e23388d4"
+  },
+  "app/src/main/java/com/eurobuddha/expert/Prompt.java": {
+    "mtime": 1783342011.0195796,
+    "ast_hash": "8f76ca1bfb4992b96f73be38ad84fe4a",
+    "semantic_hash": "8f76ca1bfb4992b96f73be38ad84fe4a"
+  },
+  "app/src/main/java/com/eurobuddha/expert/Retriever.java": {
+    "mtime": 1783342011.0179784,
+    "ast_hash": "3352af562af399b8ca344f32a8719d9a",
+    "semantic_hash": "3352af562af399b8ca344f32a8719d9a"
+  },
+  "app/src/main/java/com/eurobuddha/expert/SetupActivity.java": {
+    "mtime": 1783342011.0221066,
+    "ast_hash": "278eb5a365f73d139769690bdb425125",
+    "semantic_hash": "278eb5a365f73d139769690bdb425125"
+  },
+  "app/src/main/java/com/eurobuddha/expert/WordPieceTokenizer.java": {
+    "mtime": 1783342011.0205505,
+    "ast_hash": "40661f535bf450bf1f991a12a13f763a",
+    "semantic_hash": "40661f535bf450bf1f991a12a13f763a"
+  },
+  "build.gradle": {
+    "mtime": 1782376776.0,
+    "ast_hash": "583193a3771192898c84ddef2d926224",
+    "semantic_hash": "583193a3771192898c84ddef2d926224"
+  },
+  "gradlew": {
+    "mtime": 1782376776.0,
+    "ast_hash": "02c16663c6f0aa37f98d94d698c22b8c",
+    "semantic_hash": "02c16663c6f0aa37f98d94d698c22b8c"
+  },
+  "settings.gradle": {
+    "mtime": 1783342011.666876,
+    "ast_hash": "be9d806cf0262f0ba11a8db00af1a3b8",
+    "semantic_hash": "be9d806cf0262f0ba11a8db00af1a3b8"
+  }
+}

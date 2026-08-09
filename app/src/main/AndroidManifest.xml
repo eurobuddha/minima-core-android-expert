@@ -6,8 +6,14 @@
          (Phase 1); everything else — corpus search + embeddings — is fully offline. -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- allowBackup=false is a FUND-SAFETY setting here, not a preference. With the scaffold default
+         (true + empty rules) Android Auto Backup uploaded this app's whole data directory to the user's
+         cloud and RESTORED it on reinstall — which both exfiltrates the data below and re-plants state a
+         reinstall is supposed to clear. A reinstall must be a true reset.
+         At stake: minima-expert-ai → "key": a live, billable third-party API key held in cleartext. Auto Backup was
+         uploading it to the user's cloud and re-planting it on any restored device -->
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"

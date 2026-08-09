@@ -1,0 +1,284 @@
+{
+  "communities": {
+    "0": [
+      "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig_active",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_java_edittext",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_java_handler",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_java_linearlayout",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_java_textview",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_addbot",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_adduser",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_chip",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_done",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_dp",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_hidekeyboard",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_line",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_onready",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_onresume",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_renderanswer",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_renderwelcome",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_renderwithai",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_rowparams",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_scrolldown",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_sourcecard",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_submit",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_updatebadge",
+      "app_src_main_java_com_eurobuddha_expert_prompt_prompt_build",
+      "app_src_main_java_com_eurobuddha_expert_retriever_hit",
+      "button",
+      "scrollview"
+    ],
+    "1": [
+      "app_src_main_java_com_eurobuddha_expert_setupactivity",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_java_bundle",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_java_edittext",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_java_handler",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_java_linearlayout",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_java_override",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_java_textview",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_button",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_card",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_dp",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_field",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_oncreate",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_ondestroy",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_openurl",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_para",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_paste",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_skip",
+      "appcompatactivity",
+      "layoutparams",
+      "onclicklistener",
+      "view"
+    ],
+    "2": [
+      "app_src_main_java_com_eurobuddha_expert_embedder",
+      "app_src_main_java_com_eurobuddha_expert_embedder_embedder",
+      "app_src_main_java_com_eurobuddha_expert_embedder_embedder_close",
+      "app_src_main_java_com_eurobuddha_expert_embedder_embedder_embed",
+      "app_src_main_java_com_eurobuddha_expert_embedder_embedder_embedder",
+      "app_src_main_java_com_eurobuddha_expert_embedder_embedder_readall",
+      "app_src_main_java_com_eurobuddha_expert_embedder_java_assetmanager",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_java_bundle",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_java_override",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_applyinsets",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_boot",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_oncreate",
+      "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_ondestroy",
+      "ortenvironment",
+      "ortsession"
+    ],
+    "3": [
+      "app_src_main_java_com_eurobuddha_expert_corpus",
+      "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
+      "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
+      "app_src_main_java_com_eurobuddha_expert_corpus_corpus_readall",
+      "app_src_main_java_com_eurobuddha_expert_corpus_corpus_termfreq",
+      "app_src_main_java_com_eurobuddha_expert_corpus_java_assetmanager",
+      "app_src_main_java_com_eurobuddha_expert_corpus_java_pattern",
+      "app_src_main_java_com_eurobuddha_expert_retriever",
+      "app_src_main_java_com_eurobuddha_expert_retriever_hit_hit",
+      "app_src_main_java_com_eurobuddha_expert_retriever_java_pattern",
+      "app_src_main_java_com_eurobuddha_expert_retriever_retriever",
+      "app_src_main_java_com_eurobuddha_expert_retriever_retriever_bm25",
+      "app_src_main_java_com_eurobuddha_expert_retriever_retriever_rankmap",
+      "app_src_main_java_com_eurobuddha_expert_retriever_retriever_retrieve"
+    ],
+    "4": [
+      "app_src_main_java_com_eurobuddha_expert_onlinellm",
+      "app_src_main_java_com_eurobuddha_expert_onlinellm_cb",
+      "app_src_main_java_com_eurobuddha_expert_onlinellm_cb_ondone",
+      "app_src_main_java_com_eurobuddha_expert_onlinellm_cb_onerror",
+      "app_src_main_java_com_eurobuddha_expert_onlinellm_cb_ontoken",
+      "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm",
+      "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_brief",
+      "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_join",
+      "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_onlinellm",
+      "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_readall",
+      "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_stream",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_enable",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_setstatus"
+    ],
+    "5": [
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_java_assetmanager",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_basictokenize",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_encode",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_id",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_ischinese",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_iscontrol",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_ispunctuation",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_iswhitespace",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_normalize",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_wordpiece",
+      "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_wordpiecetokenizer"
+    ],
+    "6": [
+      "app_src_main_java_com_eurobuddha_expert_aiconfig",
+      "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig",
+      "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig_aiconfig",
+      "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig_save",
+      "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_finishok",
+      "context",
+      "sharedpreferences"
+    ],
+    "7": [
+      "gradlew",
+      "gradlew__entry",
+      "gradlew_die",
+      "gradlew_save",
+      "gradlew_warn"
+    ],
+    "8": [
+      "app_src_main_java_com_eurobuddha_expert_expertdesign",
+      "app_src_main_java_com_eurobuddha_expert_expertdesign_expertdesign",
+      "app_src_main_java_com_eurobuddha_expert_expertdesign_expertdesign_expertdesign"
+    ],
+    "9": [
+      "app_src_main_java_com_eurobuddha_expert_prompt",
+      "app_src_main_java_com_eurobuddha_expert_prompt_prompt",
+      "app_src_main_java_com_eurobuddha_expert_prompt_prompt_prompt"
+    ],
+    "10": [
+      "app_build"
+    ],
+    "11": [
+      "build"
+    ],
+    "12": [
+      "settings"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2037037037037037,
+    "1": 0.22077922077922077,
+    "2": 0.19047619047619047,
+    "3": 0.23076923076923078,
+    "4": 0.2564102564102564,
+    "5": 0.2692307692307692,
+    "6": 0.42857142857142855,
+    "7": 0.6,
+    "8": 0.6666666666666666,
+    "9": 0.6666666666666666,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity",
+      "label": "MainActivity",
+      "degree": 32
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity",
+      "label": "SetupActivity",
+      "degree": 19
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig",
+      "label": "AiConfig",
+      "degree": 13
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer",
+      "label": "WordPieceTokenizer",
+      "degree": 13
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder",
+      "label": "Embedder",
+      "degree": 10
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
+      "label": "Corpus",
+      "degree": 8
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm",
+      "label": "OnlineLlm",
+      "degree": 7
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_cb",
+      "label": "Cb",
+      "degree": 7
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_expert_retriever_hit",
+      "label": "Hit",
+      "degree": 7
+    },
+    {
+      "id": "app_src_main_java_com_eurobuddha_expert_retriever_retriever",
+      "label": "Retriever",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "MainActivity",
+      "target": "AiConfig",
+      "source_files": [
+        "app/src/main/java/com/eurobuddha/expert/MainActivity.java",
+        "app/src/main/java/com/eurobuddha/expert/AiConfig.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "SetupActivity",
+      "target": "AiConfig",
+      "source_files": [
+        "app/src/main/java/com/eurobuddha/expert/SetupActivity.java",
+        "app/src/main/java/com/eurobuddha/expert/AiConfig.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "MainActivity",
+      "target": "Corpus",
+      "source_files": [
+        "app/src/main/java/com/eurobuddha/expert/MainActivity.java",
+        "app/src/main/java/com/eurobuddha/expert/Corpus.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "Embedder",
+      "target": "WordPieceTokenizer",
+      "source_files": [
+        "app/src/main/java/com/eurobuddha/expert/Embedder.java",
+        "app/src/main/java/com/eurobuddha/expert/WordPieceTokenizer.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "MainActivity",
+      "target": "Embedder",
+      "source_files": [
+        "app/src/main/java/com/eurobuddha/expert/MainActivity.java",
+        "app/src/main/java/com/eurobuddha/expert/Embedder.java"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

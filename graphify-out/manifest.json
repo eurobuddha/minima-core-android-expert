@@ -1,8 +1,8 @@
 {
   "app/build.gradle": {
-    "mtime": 1783342012.4101903,
-    "ast_hash": "e119d0b0d0008e37daa37a906e21aad1",
-    "semantic_hash": "e119d0b0d0008e37daa37a906e21aad1"
+    "mtime": 1786235648.378908,
+    "ast_hash": "18ae602463fb1519b338857a12a0d196",
+    "semantic_hash": ""
   },
   "app/src/main/assets/corpus.json": {
     "mtime": 1782431109.7522757,
@@ -73,5 +73,45 @@
     "mtime": 1783342011.666876,
     "ast_hash": "be9d806cf0262f0ba11a8db00af1a3b8",
     "semantic_hash": "be9d806cf0262f0ba11a8db00af1a3b8"
+  },
+  "CLAUDE.md": {
+    "mtime": 1784124679.0462108,
+    "ast_hash": "4439d09bc81851d89f9ffcecc4136dcf",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1782424353.1439555,
+    "ast_hash": "4d4f0681f9bc343196c8a4e18ab3d7d9",
+    "semantic_hash": ""
+  },
+  "app/src/main/assets/vocab.txt": {
+    "mtime": 1782423567.766384,
+    "ast_hash": "9d2131a9a433502abeb512978d452ecc",
+    "semantic_hash": ""
+  },
+  "app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png": {
+    "mtime": 1782427605.5272448,
+    "ast_hash": "b9f36db9e874e87b63b4e973c752882f",
+    "semantic_hash": ""
+  },
+  "app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png": {
+    "mtime": 1782427605.5053706,
+    "ast_hash": "53021f5c0f018e936367fefa8228fecf",
+    "semantic_hash": ""
+  },
+  "app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png": {
+    "mtime": 1782427605.544251,
+    "ast_hash": "2c6a13ca3c7988b6692f940da57f28e7",
+    "semantic_hash": ""
+  },
+  "app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png": {
+    "mtime": 1782427605.561358,
+    "ast_hash": "169e5a255937d1ee410cf7e87eef5fc3",
+    "semantic_hash": ""
+  },
+  "app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png": {
+    "mtime": 1782427605.5791798,
+    "ast_hash": "3a17836042b494a58bf7877cbf852a78",
+    "semantic_hash": ""
   }
 }

@@ -15,7 +15,7 @@ WebView's WASM: it runs models through **native ARM (NEON) kernels**, where the 
 question
    │ embed (all-MiniLM-L6-v2, ONNX Runtime, native)   ← same vector space as the corpus
    ▼
-hybrid retrieval over 2,302 pre-embedded chunks
+hybrid retrieval over 1,789 pre-embedded chunks
    ├─ dense  : cosine similarity
    └─ BM25   : keyword/command match
         └─ fused with Reciprocal Rank Fusion
@@ -24,7 +24,7 @@ Retrieval (always)  ─▶ cited source passages
 AI (Phase 1)        ─▶ synthesized answer (llama.cpp + Qwen2.5 GGUF, native NEON)
 ```
 
-- **The corpus is reused verbatim** from `nanoLLM` (`corpus.json`: 2,302 chunks + 384-dim int8
+- **The corpus is reused verbatim** from `nanoLLM` (`corpus.json`: 1,789 chunks + 384-dim int8
   `all-MiniLM-L6-v2` embeddings) and shipped in `assets/`. Only the single query is embedded on-device.
 - **Generation (Phase 1)** downloads a small **Qwen2.5 GGUF** (default 0.5B) on first "Enable AI" and
   caches it for offline use — kept out of the APK to stay small. Android-only; no desktop tier.

@@ -17,8 +17,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * The offline RAG corpus: 2,302 chunks + 384-dim all-MiniLM int8 embeddings, loaded verbatim from
- * nanoLLM's corpus.json (shipped in assets). Dense vectors are dequantized to ~unit-length float for
+ * The offline RAG corpus: 1,789 chunks + 384-dim all-MiniLM int8 embeddings, loaded verbatim from
+ * nanoLLM's corpus.json (shipped in assets; rebuilt 2026-08-09 with minima-skill-1.0.0). Dense vectors are dequantized to ~unit-length float for
  * cosine (dot) scoring; a BM25 lexicon (df / per-chunk tf / lengths) is built once at boot.
  */
 public final class Corpus {

@@ -3,6 +3,7 @@ package com.eurobuddha.expert;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -189,6 +190,8 @@ public class MainActivity extends AppCompatActivity {
         int n = 1;
         for (Retriever.Hit h : hits) card.addView(sourceCard(h, n++));
 
+        if (aiConfig.toolsActive()) { renderWithAgent(card, query, hits); return; }
+
         TextView ansHead = line(card, "Answer", ExpertDesign.ACCENT, 13f, true);
         ansHead.setPadding(0, dp(14), 0, dp(4));
         final TextView ans = line(card, "…", ExpertDesign.TEXT, 15f, false);
@@ -211,6 +214,92 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         }));
+    }
+
+    /** Web-tools tier: the corpus sources are already rendered above; web sources the model looks up
+     *  appear as they arrive, with a progress line while tools run, then the answer streams below. */
+    private void renderWithAgent(LinearLayout card, String query, List<Retriever.Hit> hits) {
+        final TextView webHead = line(card, "Web sources", ExpertDesign.DIM, 12f, true);
+        webHead.setPadding(0, dp(10), 0, dp(4));
+        webHead.setVisibility(View.GONE);
+        final LinearLayout webBox = new LinearLayout(this);
+        webBox.setOrientation(LinearLayout.VERTICAL);
+        webBox.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        card.addView(webBox);
+
+        final TextView statusLine = line(card, "Contacting AI…", ExpertDesign.DIM_2, 12f, false);
+        statusLine.setPadding(0, dp(8), 0, 0);
+
+        TextView ansHead = line(card, "Answer", ExpertDesign.ACCENT, 13f, true);
+        ansHead.setPadding(0, dp(14), 0, dp(4));
+        final TextView ans = line(card, "…", ExpertDesign.TEXT, 15f, false);
+        final StringBuilder acc = new StringBuilder();
+
+        io.execute(() -> ToolAgent.run(aiConfig, query, hits, new ToolAgent.Ui() {
+            @Override public void onStatus(String s) {
+                ui.post(() -> { statusLine.setVisibility(View.VISIBLE); statusLine.setText(s); scrollDown(); });
+            }
+            @Override public void onReset() {
+                ui.post(() -> { acc.setLength(0); ans.setText("…"); });
+            }
+            @Override public void onToken(String delta) {
+                acc.append(delta);
+                ui.post(() -> { statusLine.setVisibility(View.GONE); ans.setText(acc.toString()); scrollDown(); });
+            }
+            @Override public void onWebSource(Tools.WebSource s) {
+                ui.post(() -> { webHead.setVisibility(View.VISIBLE); webBox.addView(webSourceCard(s)); scrollDown(); });
+            }
+            @Override public void onDone() {
+                ui.post(() -> {
+                    statusLine.setVisibility(View.GONE);
+                    if (acc.length() == 0) ans.setText("(the model returned no answer)");
+                    done();
+                });
+            }
+            @Override public void onError(String message) {
+                ui.post(() -> {
+                    statusLine.setVisibility(View.GONE);
+                    ans.setTextColor(ExpertDesign.RED);
+                    ans.setText("AI error: " + message + "\n\nSee the cited passages above.");
+                    done();
+                });
+            }
+        }));
+    }
+
+    /** One web source the model looked up: [n] title + clickable URL. */
+    private View webSourceCard(Tools.WebSource s) {
+        LinearLayout card = new LinearLayout(this);
+        card.setOrientation(LinearLayout.VERTICAL);
+        card.setPadding(dp(12), dp(10), dp(12), dp(10));
+        GradientDrawable bg = new GradientDrawable();
+        bg.setColor(ExpertDesign.SURFACE_2);
+        bg.setCornerRadius(dp(8));
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.topMargin = dp(8);
+        card.setLayoutParams(lp);
+        card.setBackground(bg);
+
+        TextView head = new TextView(this);
+        head.setText("[" + s.n + "]  " + s.title);
+        head.setTextColor(ExpertDesign.ACCENT);
+        head.setTypeface(Typeface.DEFAULT_BOLD);
+        head.setTextSize(13f);
+        card.addView(head);
+
+        TextView url = new TextView(this);
+        url.setText(s.url);
+        url.setTextColor(ExpertDesign.DIM_2);
+        url.setTextSize(11f);
+        url.setPadding(0, dp(1), 0, 0);
+        card.addView(url);
+
+        card.setOnClickListener(v -> {
+            try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(s.url))); } catch (Exception ignore) {}
+        });
+        return card;
     }
 
     private void renderAnswer(LinearLayout card, List<Retriever.Hit> hits) {

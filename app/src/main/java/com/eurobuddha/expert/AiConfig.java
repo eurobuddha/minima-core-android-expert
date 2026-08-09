@@ -15,18 +15,22 @@ public final class AiConfig {
 
     public boolean enabled;
     public boolean setupSeen;     // true once the first-run wizard has been shown (enabled or skipped)
+    public boolean tools;         // web tools (search / fetch / GitHub) for the online tier
     public String baseUrl;
     public String model;
     public String key;
 
     // Sensible defaults — free, fast, editable in Settings.
     private static final String DEF_URL = "https://api.groq.com/openai/v1";
-    private static final String DEF_MODEL = "llama-3.1-8b-instant";
+    static final String DEF_MODEL = "llama-3.1-8b-instant";
+    /** DEF_MODEL rarely calls tools; the wizard suggests this (also free on Groq) when tools are on. */
+    static final String TOOL_MODEL = "llama-3.3-70b-versatile";
 
     public AiConfig(Context ctx) {
         sp = ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         enabled = sp.getBoolean("enabled", false);
         setupSeen = sp.getBoolean("setupSeen", false);
+        tools = sp.getBoolean("tools", true);
         baseUrl = sp.getString("baseUrl", DEF_URL);
         model = sp.getString("model", DEF_MODEL);
         key = sp.getString("key", "");
@@ -36,6 +40,7 @@ public final class AiConfig {
         sp.edit()
             .putBoolean("enabled", enabled)
             .putBoolean("setupSeen", setupSeen)
+            .putBoolean("tools", tools)
             .putString("baseUrl", baseUrl.trim())
             .putString("model", model.trim())
             .putString("key", key.trim())
@@ -44,4 +49,7 @@ public final class AiConfig {
 
     /** AI answers are active only when enabled AND a key is present. */
     public boolean active() { return enabled && key != null && !key.trim().isEmpty(); }
+
+    /** Web tools run only when the online tier itself is active. */
+    public boolean toolsActive() { return active() && tools; }
 }

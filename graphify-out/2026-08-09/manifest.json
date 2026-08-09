@@ -1,13 +1,13 @@
 {
   "app/build.gradle": {
-    "mtime": 1786290609.981868,
-    "ast_hash": "e87d4aa884bd6a639f07c483d413e380",
+    "mtime": 1786235648.378908,
+    "ast_hash": "18ae602463fb1519b338857a12a0d196",
     "semantic_hash": ""
   },
   "app/src/main/assets/corpus.json": {
-    "mtime": 1786290081.6274505,
-    "ast_hash": "08007c81cda24c0784df65288ca17c84",
-    "semantic_hash": ""
+    "mtime": 1782431109.7522757,
+    "ast_hash": "ce5bcf73d68cabff483c347969f8dc05",
+    "semantic_hash": "ce5bcf73d68cabff483c347969f8dc05"
   },
   "app/src/main/java/com/eurobuddha/expert/AiConfig.java": {
     "mtime": 1783342011.0201254,
@@ -15,9 +15,9 @@
     "semantic_hash": "eeae8f1046a33837c19a1f15e452d6a1"
   },
   "app/src/main/java/com/eurobuddha/expert/Corpus.java": {
-    "mtime": 1786290086.6573992,
-    "ast_hash": "82a5c26d1222e52cc08232614058c3de",
-    "semantic_hash": ""
+    "mtime": 1783342011.0210707,
+    "ast_hash": "ad6d3610723c0a194e98c348679489d7",
+    "semantic_hash": "ad6d3610723c0a194e98c348679489d7"
   },
   "app/src/main/java/com/eurobuddha/expert/Embedder.java": {
     "mtime": 1783342011.0190074,
@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786290124.5505104,
-    "ast_hash": "6e60ce4b5721700ea4ca4443e42bf3a6",
+    "mtime": 1782424353.1439555,
+    "ast_hash": "4d4f0681f9bc343196c8a4e18ab3d7d9",
     "semantic_hash": ""
   },
   "app/src/main/assets/vocab.txt": {

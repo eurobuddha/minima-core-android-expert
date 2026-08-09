@@ -38,7 +38,8 @@ public class SetupActivity extends AppCompatActivity {
     private final ExecutorService io = Executors.newSingleThreadExecutor();
     private AiConfig cfg;
     private EditText keyField, modelField, urlField;
-    private TextView status, enableBtn;
+    private TextView status, enableBtn, toolsBtn, toolsHint;
+    private boolean toolsOn;
 
     private static final String GROQ_CONSOLE = "https://console.groq.com/keys";
 
@@ -99,6 +100,12 @@ public class SetupActivity extends AppCompatActivity {
         para(c, "Base URL  (advanced — any OpenAI-compatible API works)", ExpertDesign.DIM, 12f, false);
         urlField = field(c, "base url", cfg.baseUrl, InputType.TYPE_TEXT_VARIATION_URI);
 
+        toolsOn = cfg.tools;
+        toolsBtn = button(c, "", false, v -> setTools(!toolsOn));
+        toolsHint = para(c, "Tool calling needs a stronger model — " + AiConfig.TOOL_MODEL
+                + " (also free on Groq) is recommended.", ExpertDesign.DIM_2, 12f, false);
+        setTools(toolsOn);
+
         status = new TextView(this);
         status.setTextSize(13f);
         status.setPadding(0, dp(12), 0, dp(4));
@@ -125,6 +132,21 @@ public class SetupActivity extends AppCompatActivity {
     private void openUrl(String url) {
         try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url))); }
         catch (Exception e) { Toast.makeText(this, "No browser found — visit " + url, Toast.LENGTH_LONG).show(); }
+    }
+
+    /** Web-tools toggle; turning it on while the model field still holds the weak old default
+     *  swaps in the recommended tool-calling model (the user can still type anything). */
+    private void setTools(boolean on) {
+        toolsOn = on;
+        toolsBtn.setText(on ? "Web tools: ON — the AI can search the web and read GitHub"
+                            : "Web tools: OFF — answers use the corpus only");
+        toolsBtn.setTextColor(on ? ExpertDesign.ACCENT : ExpertDesign.DIM);
+        if (on && AiConfig.DEF_MODEL.equals(modelField.getText().toString().trim())) {
+            modelField.setText(AiConfig.TOOL_MODEL);
+            toolsHint.setVisibility(View.VISIBLE);
+        } else {
+            toolsHint.setVisibility(on ? View.VISIBLE : View.GONE);
+        }
     }
 
     private void paste() {
@@ -156,6 +178,7 @@ public class SetupActivity extends AppCompatActivity {
 
     private void finishOk(AiConfig test) {
         cfg.baseUrl = test.baseUrl; cfg.model = test.model; cfg.key = test.key;
+        cfg.tools = toolsOn;
         cfg.enabled = true; cfg.setupSeen = true; cfg.save();
         Toast.makeText(this, "AI answers enabled  ⚡", Toast.LENGTH_SHORT).show();
         finish();
@@ -166,6 +189,7 @@ public class SetupActivity extends AppCompatActivity {
         cfg.baseUrl = urlField.getText().toString().trim();
         cfg.model = modelField.getText().toString().trim();
         cfg.key = keyField.getText().toString().trim();
+        cfg.tools = toolsOn;
         cfg.setupSeen = true;
         if (cfg.key.isEmpty()) cfg.enabled = false;
         cfg.save();

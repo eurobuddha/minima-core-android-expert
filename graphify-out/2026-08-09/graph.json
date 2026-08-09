@@ -4,81 +4,37 @@
   "graph": {},
   "nodes": [
     {
-      "label": "README.md",
+      "label": "CLAUDE.md",
       "file_type": "document",
-      "source_file": "README.md",
+      "source_file": "CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme",
-      "community": 9,
-      "community_name": "Minima Expert (native Android)",
-      "norm_label": "readme.md"
+      "id": "claude",
+      "community": 2,
+      "community_name": "User instructions \u2014 AUTHORITATIVE. These override default behavior and must be followed exactly.",
+      "norm_label": "claude.md"
     },
     {
-      "label": "Minima Expert (native Android)",
+      "label": "User instructions \u2014 AUTHORITATIVE. These override default behavior and must be followed exactly.",
       "file_type": "document",
-      "source_file": "README.md",
+      "source_file": "CLAUDE.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme_minima_expert_native_android",
-      "community": 9,
-      "community_name": "Minima Expert (native Android)",
-      "norm_label": "minima expert (native android)"
+      "id": "claude_user_instructions_authoritative_these_override_default_behavior_and_must_be_followed_exactly",
+      "community": 2,
+      "community_name": "User instructions \u2014 AUTHORITATIVE. These override default behavior and must be followed exactly.",
+      "norm_label": "user instructions \u2014 authoritative. these override default behavior and must be followed exactly."
     },
     {
-      "label": "How it works",
+      "label": "RULE 0 (highest priority) \u2014 Follow the user's explicit instructions. They are BLOCKING, not suggestions.",
       "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L12",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
       "_origin": "ast",
-      "id": "readme_how_it_works",
-      "community": 9,
-      "community_name": "Minima Expert (native Android)",
-      "norm_label": "how it works"
-    },
-    {
-      "label": "Status",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "readme_status",
-      "community": 9,
-      "community_name": "Minima Expert (native Android)",
-      "norm_label": "status"
-    },
-    {
-      "label": "Build",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "readme_build",
-      "community": 9,
-      "community_name": "Minima Expert (native Android)",
-      "norm_label": "build"
-    },
-    {
-      "label": "Releases",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L46",
-      "_origin": "ast",
-      "id": "readme_releases",
-      "community": 9,
-      "community_name": "Minima Expert (native Android)",
-      "norm_label": "releases"
-    },
-    {
-      "label": "Project layout",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L50",
-      "_origin": "ast",
-      "id": "readme_project_layout",
-      "community": 9,
-      "community_name": "Minima Expert (native Android)",
-      "norm_label": "project layout"
+      "id": "claude_rule_0_highest_priority_follow_the_user_s_explicit_instructions_they_are_blocking_not_suggestions",
+      "community": 2,
+      "community_name": "User instructions \u2014 AUTHORITATIVE. These override default behavior and must be followed exactly.",
+      "norm_label": "rule 0 (highest priority) \u2014 follow the user's explicit instructions. they are blocking, not suggestions."
     },
     {
       "label": "app/build.gradle",
@@ -92,116 +48,6 @@
       "norm_label": "app/build.gradle"
     },
     {
-      "label": "Corpus.java",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_eurobuddha_expert_corpus",
-      "community": 3,
-      "community_name": "Corpus",
-      "norm_label": "corpus.java"
-    },
-    {
-      "label": "Corpus",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
-      "community": 3,
-      "community_name": "Corpus",
-      "norm_label": "corpus"
-    },
-    {
-      "label": "Pattern",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "pattern",
-      "community": 3,
-      "community_name": "Corpus",
-      "norm_label": "pattern"
-    },
-    {
-      "label": ".load()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
-      "community": 3,
-      "community_name": "Corpus",
-      "norm_label": ".load()"
-    },
-    {
-      "label": "AssetManager",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "assetmanager",
-      "community": 3,
-      "community_name": "Corpus",
-      "norm_label": "assetmanager"
-    },
-    {
-      "label": ".termFreq()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L73",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_termfreq",
-      "community": 3,
-      "community_name": "Corpus",
-      "norm_label": ".termfreq()"
-    },
-    {
-      "label": ".readAll()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L80",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_readall",
-      "community": 3,
-      "community_name": "Corpus",
-      "norm_label": ".readall()"
-    },
-    {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "User instructions \u2014 AUTHORITATIVE. These override default behavior and must be followed exactly.",
-      "norm_label": "claude.md",
-      "id": "claude"
-    },
-    {
-      "label": "User instructions \u2014 AUTHORITATIVE. These override default behavior and must be followed exactly.",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "User instructions \u2014 AUTHORITATIVE. These override default behavior and must be followed exactly.",
-      "norm_label": "user instructions \u2014 authoritative. these override default behavior and must be followed exactly.",
-      "id": "claude_user_instructions_authoritative_these_override_default_behavior_and_must_be_followed_exactly"
-    },
-    {
-      "label": "RULE 0 (highest priority) \u2014 Follow the user's explicit instructions. They are BLOCKING, not suggestions.",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "User instructions \u2014 AUTHORITATIVE. These override default behavior and must be followed exactly.",
-      "norm_label": "rule 0 (highest priority) \u2014 follow the user's explicit instructions. they are blocking, not suggestions.",
-      "id": "claude_rule_0_highest_priority_follow_the_user_s_explicit_instructions_they_are_blocking_not_suggestions"
-    },
-    {
       "label": "AiConfig.java",
       "file_type": "code",
       "source_file": "app/src/main/java/com/eurobuddha/expert/AiConfig.java",
@@ -209,8 +55,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "aiconfig.java",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig"
+      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig",
+      "community_name": "AiConfig"
     },
     {
       "label": "AiConfig",
@@ -220,8 +66,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "aiconfig",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig"
+      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig",
+      "community_name": "AiConfig"
     },
     {
       "label": "SharedPreferences",
@@ -231,8 +77,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "sharedpreferences",
-      "community_name": "AiConfig",
-      "id": "sharedpreferences"
+      "id": "sharedpreferences",
+      "community_name": "AiConfig"
     },
     {
       "label": ".AiConfig()",
@@ -242,8 +88,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".aiconfig()",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig_aiconfig"
+      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig_aiconfig",
+      "community_name": "AiConfig"
     },
     {
       "label": "Context",
@@ -253,8 +99,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "context",
-      "community_name": "AiConfig",
-      "id": "context"
+      "id": "context",
+      "community_name": "AiConfig"
     },
     {
       "label": ".save()",
@@ -264,8 +110,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".save()",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig_save"
+      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig_save",
+      "community_name": "AiConfig"
     },
     {
       "label": ".active()",
@@ -275,8 +121,30 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".active()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig_active"
+      "id": "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig_active",
+      "community_name": "MainActivity"
+    },
+    {
+      "label": "Corpus.java",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "corpus.java",
+      "id": "app_src_main_java_com_eurobuddha_expert_corpus",
+      "community_name": "Corpus"
+    },
+    {
+      "label": "Corpus",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "corpus",
+      "id": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
+      "community_name": "Corpus"
     },
     {
       "label": "Pattern",
@@ -284,10 +152,21 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 14,
+      "community": 3,
       "norm_label": "pattern",
-      "community_name": "Pattern",
-      "id": "app_src_main_java_com_eurobuddha_expert_corpus_java_pattern"
+      "id": "app_src_main_java_com_eurobuddha_expert_corpus_java_pattern",
+      "community_name": "Corpus"
+    },
+    {
+      "label": ".load()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L37",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": ".load()",
+      "id": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
+      "community_name": "Corpus"
     },
     {
       "label": "AssetManager",
@@ -295,10 +174,32 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 13,
+      "community": 3,
       "norm_label": "assetmanager",
-      "community_name": "AssetManager",
-      "id": "app_src_main_java_com_eurobuddha_expert_corpus_java_assetmanager"
+      "id": "app_src_main_java_com_eurobuddha_expert_corpus_java_assetmanager",
+      "community_name": "Corpus"
+    },
+    {
+      "label": ".termFreq()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L73",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": ".termfreq()",
+      "id": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_termfreq",
+      "community_name": "Corpus"
+    },
+    {
+      "label": ".readAll()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L80",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": ".readall()",
+      "id": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_readall",
+      "community_name": "Corpus"
     },
     {
       "label": "Embedder.java",
@@ -308,8 +209,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "embedder.java",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_embedder"
+      "id": "app_src_main_java_com_eurobuddha_expert_embedder",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": "Embedder",
@@ -319,8 +220,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "embedder",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder"
+      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": "OrtEnvironment",
@@ -330,8 +231,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "ortenvironment",
-      "community_name": "WordPieceTokenizer",
-      "id": "ortenvironment"
+      "id": "ortenvironment",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": "OrtSession",
@@ -341,8 +242,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "ortsession",
-      "community_name": "WordPieceTokenizer",
-      "id": "ortsession"
+      "id": "ortsession",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".Embedder()",
@@ -352,8 +253,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".embedder()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder_embedder"
+      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder_embedder",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": "AssetManager",
@@ -363,8 +264,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "assetmanager",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_embedder_java_assetmanager"
+      "id": "app_src_main_java_com_eurobuddha_expert_embedder_java_assetmanager",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".embed()",
@@ -374,8 +275,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".embed()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder_embed"
+      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder_embed",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".close()",
@@ -385,8 +286,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".close()",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder_close"
+      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder_close",
+      "community_name": "AiConfig"
     },
     {
       "label": ".readAll()",
@@ -396,8 +297,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".readall()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder_readall"
+      "id": "app_src_main_java_com_eurobuddha_expert_embedder_embedder_readall",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": "ExpertDesign.java",
@@ -407,8 +308,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "expertdesign.java",
-      "community_name": "ExpertDesign",
-      "id": "app_src_main_java_com_eurobuddha_expert_expertdesign"
+      "id": "app_src_main_java_com_eurobuddha_expert_expertdesign",
+      "community_name": "ExpertDesign"
     },
     {
       "label": "ExpertDesign",
@@ -418,8 +319,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "expertdesign",
-      "community_name": "ExpertDesign",
-      "id": "app_src_main_java_com_eurobuddha_expert_expertdesign_expertdesign"
+      "id": "app_src_main_java_com_eurobuddha_expert_expertdesign_expertdesign",
+      "community_name": "ExpertDesign"
     },
     {
       "label": ".ExpertDesign()",
@@ -429,8 +330,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": ".expertdesign()",
-      "community_name": "ExpertDesign",
-      "id": "app_src_main_java_com_eurobuddha_expert_expertdesign_expertdesign_expertdesign"
+      "id": "app_src_main_java_com_eurobuddha_expert_expertdesign_expertdesign_expertdesign",
+      "community_name": "ExpertDesign"
     },
     {
       "label": "MainActivity.java",
@@ -440,8 +341,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "mainactivity.java",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity",
+      "community_name": "MainActivity"
     },
     {
       "label": "MainActivity",
@@ -451,8 +352,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "mainactivity",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity",
+      "community_name": "MainActivity"
     },
     {
       "label": "AppCompatActivity",
@@ -460,10 +361,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 1,
+      "community": 0,
       "norm_label": "appcompatactivity",
-      "community_name": "SetupActivity",
-      "id": "appcompatactivity"
+      "id": "appcompatactivity",
+      "community_name": "MainActivity"
     },
     {
       "label": "LinearLayout",
@@ -473,8 +374,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "linearlayout",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_linearlayout"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_linearlayout",
+      "community_name": "MainActivity"
     },
     {
       "label": "ScrollView",
@@ -482,10 +383,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 0,
+      "community": 1,
       "norm_label": "scrollview",
-      "community_name": "MainActivity",
-      "id": "scrollview"
+      "id": "scrollview",
+      "community_name": "SetupActivity"
     },
     {
       "label": "EditText",
@@ -495,8 +396,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "edittext",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_edittext"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_edittext",
+      "community_name": "MainActivity"
     },
     {
       "label": "Button",
@@ -506,8 +407,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "button",
-      "community_name": "MainActivity",
-      "id": "button"
+      "id": "button",
+      "community_name": "MainActivity"
     },
     {
       "label": "TextView",
@@ -517,8 +418,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "textview",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_textview"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_textview",
+      "community_name": "MainActivity"
     },
     {
       "label": "Handler",
@@ -528,8 +429,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "handler",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_handler"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_handler",
+      "community_name": "MainActivity"
     },
     {
       "label": ".onCreate()",
@@ -539,8 +440,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".oncreate()",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_oncreate"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_oncreate",
+      "community_name": "AiConfig"
     },
     {
       "label": "Bundle",
@@ -550,8 +451,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "bundle",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_bundle"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_bundle",
+      "community_name": "AiConfig"
     },
     {
       "label": "Override",
@@ -561,8 +462,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "override",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_override"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_java_override",
+      "community_name": "AiConfig"
     },
     {
       "label": ".onResume()",
@@ -572,8 +473,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".onresume()",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_onresume"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_onresume",
+      "community_name": "AiConfig"
     },
     {
       "label": ".applyInsets()",
@@ -583,8 +484,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".applyinsets()",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_applyinsets"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_applyinsets",
+      "community_name": "AiConfig"
     },
     {
       "label": ".boot()",
@@ -594,8 +495,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".boot()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_boot"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_boot",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".onReady()",
@@ -605,8 +506,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".onready()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_onready"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_onready",
+      "community_name": "MainActivity"
     },
     {
       "label": ".updateBadge()",
@@ -616,8 +517,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".updatebadge()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_updatebadge"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_updatebadge",
+      "community_name": "MainActivity"
     },
     {
       "label": ".renderWelcome()",
@@ -627,8 +528,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".renderwelcome()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_renderwelcome"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_renderwelcome",
+      "community_name": "MainActivity"
     },
     {
       "label": ".submit()",
@@ -638,8 +539,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".submit()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_submit"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_submit",
+      "community_name": "MainActivity"
     },
     {
       "label": ".done()",
@@ -649,8 +550,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".done()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_done"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_done",
+      "community_name": "MainActivity"
     },
     {
       "label": ".renderWithAi()",
@@ -660,8 +561,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".renderwithai()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_renderwithai"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_renderwithai",
+      "community_name": "MainActivity"
     },
     {
       "label": ".renderAnswer()",
@@ -671,8 +572,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".renderanswer()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_renderanswer"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_renderanswer",
+      "community_name": "MainActivity"
     },
     {
       "label": ".addBot()",
@@ -682,8 +583,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".addbot()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_addbot"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_addbot",
+      "community_name": "MainActivity"
     },
     {
       "label": ".addUser()",
@@ -693,8 +594,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".adduser()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_adduser"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_adduser",
+      "community_name": "MainActivity"
     },
     {
       "label": ".sourceCard()",
@@ -704,8 +605,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".sourcecard()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_sourcecard"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_sourcecard",
+      "community_name": "MainActivity"
     },
     {
       "label": "View",
@@ -715,8 +616,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "view",
-      "community_name": "SetupActivity",
-      "id": "view"
+      "id": "view",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".chip()",
@@ -726,8 +627,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".chip()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_chip"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_chip",
+      "community_name": "MainActivity"
     },
     {
       "label": ".line()",
@@ -737,8 +638,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".line()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_line"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_line",
+      "community_name": "MainActivity"
     },
     {
       "label": ".rowParams()",
@@ -748,8 +649,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".rowparams()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_rowparams"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_rowparams",
+      "community_name": "MainActivity"
     },
     {
       "label": "LayoutParams",
@@ -759,8 +660,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "layoutparams",
-      "community_name": "SetupActivity",
-      "id": "layoutparams"
+      "id": "layoutparams",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".scrollDown()",
@@ -770,8 +671,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".scrolldown()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_scrolldown"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_scrolldown",
+      "community_name": "MainActivity"
     },
     {
       "label": ".hideKeyboard()",
@@ -781,8 +682,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".hidekeyboard()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_hidekeyboard"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_hidekeyboard",
+      "community_name": "MainActivity"
     },
     {
       "label": ".dp()",
@@ -792,8 +693,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": ".dp()",
-      "community_name": "MainActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_dp"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_dp",
+      "community_name": "MainActivity"
     },
     {
       "label": ".onDestroy()",
@@ -803,8 +704,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".ondestroy()",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_ondestroy"
+      "id": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_ondestroy",
+      "community_name": "AiConfig"
     },
     {
       "label": "OnlineLlm.java",
@@ -814,8 +715,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "onlinellm.java",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm",
+      "community_name": ".stream"
     },
     {
       "label": "OnlineLlm",
@@ -825,8 +726,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "onlinellm",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm",
+      "community_name": ".stream"
     },
     {
       "label": ".OnlineLlm()",
@@ -836,8 +737,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".onlinellm()",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_onlinellm"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_onlinellm",
+      "community_name": ".stream"
     },
     {
       "label": "Cb",
@@ -847,8 +748,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "cb",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_cb"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_cb",
+      "community_name": ".stream"
     },
     {
       "label": ".onToken()",
@@ -858,8 +759,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".ontoken()",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_cb_ontoken"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_cb_ontoken",
+      "community_name": ".stream"
     },
     {
       "label": ".onDone()",
@@ -869,8 +770,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".ondone()",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_cb_ondone"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_cb_ondone",
+      "community_name": ".stream"
     },
     {
       "label": ".onError()",
@@ -880,8 +781,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".onerror()",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_cb_onerror"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_cb_onerror",
+      "community_name": ".stream"
     },
     {
       "label": ".stream()",
@@ -891,8 +792,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".stream()",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_stream"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_stream",
+      "community_name": ".stream"
     },
     {
       "label": ".join()",
@@ -902,8 +803,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".join()",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_join"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_join",
+      "community_name": ".stream"
     },
     {
       "label": ".readAll()",
@@ -913,8 +814,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".readall()",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_readall"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_readall",
+      "community_name": ".stream"
     },
     {
       "label": ".brief()",
@@ -924,8 +825,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".brief()",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_brief"
+      "id": "app_src_main_java_com_eurobuddha_expert_onlinellm_onlinellm_brief",
+      "community_name": ".stream"
     },
     {
       "label": "Prompt.java",
@@ -933,10 +834,10 @@
       "source_file": "app/src/main/java/com/eurobuddha/expert/Prompt.java",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 9,
       "norm_label": "prompt.java",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_prompt"
+      "id": "app_src_main_java_com_eurobuddha_expert_prompt",
+      "community_name": "Prompt"
     },
     {
       "label": "Prompt",
@@ -944,10 +845,10 @@
       "source_file": "app/src/main/java/com/eurobuddha/expert/Prompt.java",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 3,
+      "community": 9,
       "norm_label": "prompt",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_prompt_prompt"
+      "id": "app_src_main_java_com_eurobuddha_expert_prompt_prompt",
+      "community_name": "Prompt"
     },
     {
       "label": ".Prompt()",
@@ -955,10 +856,10 @@
       "source_file": "app/src/main/java/com/eurobuddha/expert/Prompt.java",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 3,
+      "community": 9,
       "norm_label": ".prompt()",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_prompt_prompt_prompt"
+      "id": "app_src_main_java_com_eurobuddha_expert_prompt_prompt_prompt",
+      "community_name": "Prompt"
     },
     {
       "label": ".build()",
@@ -966,10 +867,10 @@
       "source_file": "app/src/main/java/com/eurobuddha/expert/Prompt.java",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "norm_label": ".build()",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_prompt_prompt_build"
+      "id": "app_src_main_java_com_eurobuddha_expert_prompt_prompt_build",
+      "community_name": "MainActivity"
     },
     {
       "label": "Retriever.java",
@@ -979,8 +880,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "retriever.java",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_retriever"
+      "id": "app_src_main_java_com_eurobuddha_expert_retriever",
+      "community_name": "Corpus"
     },
     {
       "label": "Retriever",
@@ -990,8 +891,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "retriever",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_retriever_retriever"
+      "id": "app_src_main_java_com_eurobuddha_expert_retriever_retriever",
+      "community_name": "Corpus"
     },
     {
       "label": "Pattern",
@@ -1001,8 +902,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "pattern",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_retriever_java_pattern"
+      "id": "app_src_main_java_com_eurobuddha_expert_retriever_java_pattern",
+      "community_name": "Corpus"
     },
     {
       "label": "Hit",
@@ -1010,10 +911,10 @@
       "source_file": "app/src/main/java/com/eurobuddha/expert/Retriever.java",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "norm_label": "hit",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_retriever_hit"
+      "id": "app_src_main_java_com_eurobuddha_expert_retriever_hit",
+      "community_name": "MainActivity"
     },
     {
       "label": ".Hit()",
@@ -1023,8 +924,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": ".hit()",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_retriever_hit_hit"
+      "id": "app_src_main_java_com_eurobuddha_expert_retriever_hit_hit",
+      "community_name": "Corpus"
     },
     {
       "label": ".retrieve()",
@@ -1034,8 +935,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": ".retrieve()",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_retriever_retriever_retrieve"
+      "id": "app_src_main_java_com_eurobuddha_expert_retriever_retriever_retrieve",
+      "community_name": "Corpus"
     },
     {
       "label": ".bm25()",
@@ -1045,8 +946,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": ".bm25()",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_retriever_retriever_bm25"
+      "id": "app_src_main_java_com_eurobuddha_expert_retriever_retriever_bm25",
+      "community_name": "Corpus"
     },
     {
       "label": ".rankMap()",
@@ -1056,8 +957,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": ".rankmap()",
-      "community_name": "Corpus",
-      "id": "app_src_main_java_com_eurobuddha_expert_retriever_retriever_rankmap"
+      "id": "app_src_main_java_com_eurobuddha_expert_retriever_retriever_rankmap",
+      "community_name": "Corpus"
     },
     {
       "label": "SetupActivity.java",
@@ -1067,8 +968,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "setupactivity.java",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity",
+      "community_name": "SetupActivity"
     },
     {
       "label": "SetupActivity",
@@ -1078,8 +979,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "setupactivity",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity",
+      "community_name": "SetupActivity"
     },
     {
       "label": "Handler",
@@ -1089,8 +990,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "handler",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_handler"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_handler",
+      "community_name": "SetupActivity"
     },
     {
       "label": "EditText",
@@ -1100,8 +1001,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "edittext",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_edittext"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_edittext",
+      "community_name": "SetupActivity"
     },
     {
       "label": "TextView",
@@ -1111,8 +1012,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "textview",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_textview"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_textview",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".onCreate()",
@@ -1122,8 +1023,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": ".oncreate()",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_oncreate"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_oncreate",
+      "community_name": "SetupActivity"
     },
     {
       "label": "Bundle",
@@ -1133,8 +1034,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "bundle",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_bundle"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_bundle",
+      "community_name": "SetupActivity"
     },
     {
       "label": "Override",
@@ -1144,8 +1045,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "override",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_override"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_override",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".openUrl()",
@@ -1155,8 +1056,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": ".openurl()",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_openurl"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_openurl",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".paste()",
@@ -1166,8 +1067,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": ".paste()",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_paste"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_paste",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".enable()",
@@ -1177,8 +1078,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".enable()",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_enable"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_enable",
+      "community_name": ".stream"
     },
     {
       "label": ".finishOk()",
@@ -1188,8 +1089,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": ".finishok()",
-      "community_name": "AiConfig",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_finishok"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_finishok",
+      "community_name": "AiConfig"
     },
     {
       "label": ".skip()",
@@ -1199,8 +1100,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": ".skip()",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_skip"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_skip",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".card()",
@@ -1210,8 +1111,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": ".card()",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_card"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_card",
+      "community_name": "SetupActivity"
     },
     {
       "label": "LinearLayout",
@@ -1221,8 +1122,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "linearlayout",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_linearlayout"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_java_linearlayout",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".para()",
@@ -1232,8 +1133,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": ".para()",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_para"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_para",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".field()",
@@ -1243,8 +1144,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": ".field()",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_field"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_field",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".button()",
@@ -1254,8 +1155,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": ".button()",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_button"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_button",
+      "community_name": "SetupActivity"
     },
     {
       "label": "OnClickListener",
@@ -1265,8 +1166,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "onclicklistener",
-      "community_name": "SetupActivity",
-      "id": "onclicklistener"
+      "id": "onclicklistener",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".setStatus()",
@@ -1276,8 +1177,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": ".setstatus()",
-      "community_name": ".stream",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_setstatus"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_setstatus",
+      "community_name": ".stream"
     },
     {
       "label": ".dp()",
@@ -1287,8 +1188,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": ".dp()",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_dp"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_dp",
+      "community_name": "SetupActivity"
     },
     {
       "label": ".onDestroy()",
@@ -1298,8 +1199,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": ".ondestroy()",
-      "community_name": "SetupActivity",
-      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_ondestroy"
+      "id": "app_src_main_java_com_eurobuddha_expert_setupactivity_setupactivity_ondestroy",
+      "community_name": "SetupActivity"
     },
     {
       "label": "WordPieceTokenizer.java",
@@ -1309,8 +1210,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "wordpiecetokenizer.java",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": "WordPieceTokenizer",
@@ -1320,8 +1221,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "wordpiecetokenizer",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".WordPieceTokenizer()",
@@ -1331,8 +1232,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".wordpiecetokenizer()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_wordpiecetokenizer"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_wordpiecetokenizer",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": "AssetManager",
@@ -1342,8 +1243,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "assetmanager",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_java_assetmanager"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_java_assetmanager",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".id()",
@@ -1353,8 +1254,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".id()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_id"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_id",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".encode()",
@@ -1364,8 +1265,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".encode()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_encode"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_encode",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".normalize()",
@@ -1375,8 +1276,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".normalize()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_normalize"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_normalize",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".basicTokenize()",
@@ -1386,8 +1287,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".basictokenize()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_basictokenize"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_basictokenize",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".wordpiece()",
@@ -1397,8 +1298,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".wordpiece()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_wordpiece"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_wordpiece",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".isWhitespace()",
@@ -1408,8 +1309,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".iswhitespace()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_iswhitespace"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_iswhitespace",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".isControl()",
@@ -1419,8 +1320,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".iscontrol()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_iscontrol"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_iscontrol",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".isPunctuation()",
@@ -1430,8 +1331,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".ispunctuation()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_ispunctuation"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_ispunctuation",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": ".isChinese()",
@@ -1441,8 +1342,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": ".ischinese()",
-      "community_name": "WordPieceTokenizer",
-      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_ischinese"
+      "id": "app_src_main_java_com_eurobuddha_expert_wordpiecetokenizer_wordpiecetokenizer_ischinese",
+      "community_name": "WordPieceTokenizer"
     },
     {
       "label": "build.gradle",
@@ -1452,8 +1353,8 @@
       "_origin": "ast",
       "community": 11,
       "norm_label": "build.gradle",
-      "community_name": "build.gradle",
-      "id": "build"
+      "id": "build",
+      "community_name": "build.gradle"
     },
     {
       "label": "gradlew",
@@ -1467,8 +1368,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "gradlew",
-      "community_name": "gradlew",
-      "id": "gradlew"
+      "id": "gradlew",
+      "community_name": "gradlew"
     },
     {
       "label": "gradlew script",
@@ -1482,8 +1383,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "gradlew script",
-      "community_name": "gradlew",
-      "id": "gradlew__entry"
+      "id": "gradlew__entry",
+      "community_name": "gradlew"
     },
     {
       "label": "warn()",
@@ -1497,8 +1398,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "warn()",
-      "community_name": "gradlew",
-      "id": "gradlew_warn"
+      "id": "gradlew_warn",
+      "community_name": "gradlew"
     },
     {
       "label": "die()",
@@ -1512,8 +1413,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "die()",
-      "community_name": "gradlew",
-      "id": "gradlew_die"
+      "id": "gradlew_die",
+      "community_name": "gradlew"
     },
     {
       "label": "save()",
@@ -1527,8 +1428,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "save()",
-      "community_name": "gradlew",
-      "id": "gradlew_save"
+      "id": "gradlew_save",
+      "community_name": "gradlew"
     },
     {
       "label": "settings.gradle",
@@ -1538,252 +1439,21 @@
       "_origin": "ast",
       "community": 12,
       "norm_label": "settings.gradle",
-      "community_name": "settings.gradle",
-      "id": "settings"
+      "id": "settings",
+      "community_name": "settings.gradle"
     }
   ],
   "links": [
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "readme_minima_expert_native_android",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L37",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_minima_expert_native_android",
-      "target": "readme_build",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_minima_expert_native_android",
-      "target": "readme_how_it_works",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L50",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_minima_expert_native_android",
-      "target": "readme_project_layout",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L46",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_minima_expert_native_android",
-      "target": "readme_releases",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L32",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_minima_expert_native_android",
-      "target": "readme_status",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L24",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_src_main_java_com_eurobuddha_expert_corpus",
-      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_src_main_java_com_eurobuddha_expert_corpus",
-      "target": "assetmanager",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L17",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_src_main_java_com_eurobuddha_expert_corpus",
-      "target": "pattern",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L37",
-      "weight": 1.0,
-      "_origin": "ast",
-      "context": "return_type",
-      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
-      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L80",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
-      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_readall",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L73",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
-      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_termfreq",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L35",
-      "weight": 1.0,
-      "context": "field",
-      "_origin": "ast",
-      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
-      "target": "pattern",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/MainActivity.java",
-      "source_location": "L45",
-      "weight": 1.0,
-      "context": "field",
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity",
-      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Retriever.java",
-      "source_location": "L72",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "app_src_main_java_com_eurobuddha_expert_retriever_retriever_bm25",
-      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Retriever.java",
-      "source_location": "L38",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "app_src_main_java_com_eurobuddha_expert_retriever_retriever_retrieve",
-      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L38",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
-      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_readall",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L61",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
-      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_termfreq",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
-      "source_location": "L37",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "_origin": "ast",
-      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
-      "target": "assetmanager",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/src/main/java/com/eurobuddha/expert/MainActivity.java",
-      "source_location": "L111",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_boot",
-      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "claude",
-      "target": "claude_user_instructions_authoritative_these_override_default_behavior_and_must_be_followed_exactly"
+      "target": "claude_user_instructions_authoritative_these_override_default_behavior_and_must_be_followed_exactly",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1792,9 +1462,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "claude_user_instructions_authoritative_these_override_default_behavior_and_must_be_followed_exactly",
-      "target": "claude_rule_0_highest_priority_follow_the_user_s_explicit_instructions_they_are_blocking_not_suggestions"
+      "target": "claude_rule_0_highest_priority_follow_the_user_s_explicit_instructions_they_are_blocking_not_suggestions",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2055,6 +1725,171 @@
       "_origin": "ast",
       "source": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_updatebadge",
       "target": "app_src_main_java_com_eurobuddha_expert_aiconfig_aiconfig_active"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_corpus",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_corpus",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_java_assetmanager"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_corpus",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_java_pattern"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_readall"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_termfreq"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L35",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_java_pattern"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "context": "return_type",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/MainActivity.java",
+      "source_location": "L45",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Retriever.java",
+      "source_location": "L72",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_retriever_retriever_bm25",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Retriever.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_retriever_retriever_retrieve",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_readall"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_termfreq"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/eurobuddha/expert/Corpus.java",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_java_assetmanager"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/src/main/java/com/eurobuddha/expert/MainActivity.java",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_src_main_java_com_eurobuddha_expert_mainactivity_mainactivity_boot",
+      "target": "app_src_main_java_com_eurobuddha_expert_corpus_corpus_load"
     },
     {
       "relation": "contains",
@@ -4835,5 +4670,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ef19c47b70535d4bbf58186cf87b4f6314f83f94"
+  "built_at_commit": "f0a8f113089d8e9fe70de5055c83878277083cea"
 }

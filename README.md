@@ -33,6 +33,14 @@ AI (Phase 1)        ─▶ synthesized answer (llama.cpp + Qwen2.5 GGUF, native 
 - **Phase 0 (v0.1.x)** — native RAG retrieval with citations (this build).
 - **Phase 1 (v0.2.x)** — on-device generation via llama.cpp / JNI + Qwen2.5.
 - **Phase 2 (v0.3.x+)** — model picker (0.5B / 1.5B), management, polish.
+- **v0.7.0 — web tools for AI answers.** When online AI is enabled, the model can call tools:
+  `web_search` (DuckDuckGo — no extra API key), `fetch_url` (https-only, size-capped), and
+  `github` (repo metadata / README / files / search via api.github.com, unauthenticated 60 req/h).
+  Web sources render as clickable cards, cited `[n]` in one numbering with the corpus passages.
+  Tool results are treated as untrusted content (envelope + prompt guard); ≤4 model rounds / 90s
+  per question. Toggleable in the setup wizard — tool calling wants a stronger model, so the
+  wizard suggests `llama-3.3-70b-versatile` (also free on Groq). The MiniDapp sibling has the
+  same tier in parity.
 
 ## Build
 Requires a **JDK 17/21** (the Android Studio JBR works):

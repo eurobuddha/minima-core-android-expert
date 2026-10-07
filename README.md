@@ -56,7 +56,7 @@ Versioned APKs + changelog: **[eurobuddha/minima-core-apks](https://github.com/e
 (tags `minima-expert-v<version>`).
 
 ## Project layout
-- `app/src/main/java/org/minimarex/expert/` — `MainActivity` (chat UI), `Corpus` (parse + dequantize +
+- `app/src/main/java/com/eurobuddha/expert/` — `MainActivity` (chat UI), `Corpus` (parse + dequantize +
   BM25), `WordPieceTokenizer` (BERT), `Embedder` (ONNX Runtime), `Retriever` (dense+BM25+RRF),
   `ExpertDesign`. (Phase 1 adds `LlamaEngine` + JNI + vendored llama.cpp + `ModelManager`.)
 - `app/src/main/assets/` — `corpus.json`, `minilm.onnx`, `vocab.txt`.
